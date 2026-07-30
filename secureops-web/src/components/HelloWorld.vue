@@ -1,41 +1,62 @@
 <script setup lang="ts">
-defineProps<{
-  msg: string
-}>()
+const applicationName = 'SecureOps'
 </script>
 
 <template>
-  <div class="greetings">
-    <h1 class="green">{{ msg }}</h1>
-    <h3>
-      You’ve successfully created a project with
-      <a href="https://vite.dev/" target="_blank" rel="noopener">Vite</a> +
-      <a href="https://vuejs.org/" target="_blank" rel="noopener">Vue 3</a>. What's next?
-    </h3>
-  </div>
+  <main class="home-view">
+    <section class="welcome-card">
+      <span class="badge">Secure platform</span>
+
+      <h1>{{ applicationName }}</h1>
+
+      <p>
+        User management, access control and security monitoring platform.
+      </p>
+    </section>
+  </main>
 </template>
 
 <style scoped>
-h1 {
-  font-weight: 500;
-  font-size: 2.6rem;
-  position: relative;
-  top: -10px;
+.home-view {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: #f4f4f5;
 }
 
-h3 {
-  font-size: 1.2rem;
-}
-
-.greetings h1,
-.greetings h3 {
+.welcome-card {
+  width: 100%;
+  max-width: 640px;
+  padding: 48px;
+  border: 1px solid #e4e4e7;
+  border-radius: 20px;
+  background: #ffffff;
   text-align: center;
+  box-shadow: 0 12px 40px rgb(0 0 0 / 8%);
 }
 
-@media (min-width: 1024px) {
-  .greetings h1,
-  .greetings h3 {
-    text-align: left;
-  }
+.badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: #18181b;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+h1 {
+  margin: 20px 0 10px;
+  color: #18181b;
+  font-size: 48px;
+}
+
+p {
+  margin: 0;
+  color: #71717a;
+  font-size: 17px;
+  line-height: 1.6;
 }
 </style>
