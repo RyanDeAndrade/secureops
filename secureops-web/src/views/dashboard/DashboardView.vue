@@ -1,11 +1,66 @@
+<script setup lang="ts">
+import { Activity, ShieldAlert, UserCheck, Users } from 'lucide-vue-next'
+
+import DashboardStatCard from './components/DashboardStatCard.vue'
+const statistics = [
+  {
+    label: 'Total users',
+    value: 248,
+    description: 'Since last month',
+    trend: '+12%',
+    trendDirection: 'up' as const,
+    icon: Users,
+  },
+  {
+    label: 'Active users',
+    value: 231,
+    description: '93.1% of all users',
+    trend: '+4%',
+    trendDirection: 'up' as const,
+    icon: UserCheck,
+  },
+  {
+    label: 'Security alerts',
+    value: 7,
+    description: 'Requires attention',
+    trend: '-2',
+    trendDirection: 'down' as const,
+    icon: ShieldAlert,
+  },
+  {
+    label: 'Activities today',
+    value: 84,
+    description: 'Recorded events',
+    trend: '+18%',
+    trendDirection: 'up' as const,
+    icon: Activity,
+  },
+]
+</script>
+
 <template>
   <section>
-    <h1 class="text-2xl font-bold text-zinc-900">
-      Dashboard
-    </h1>
+    <header class="mb-8">
+      <p class="text-sm font-semibold text-zinc-500">Overview</p>
 
-    <p class="mt-2 text-sm text-zinc-500">
-      Welcome to the SecureOps dashboard.
-    </p>
+      <h1 class="mt-1 text-3xl font-bold tracking-tight text-zinc-900">Security dashboard</h1>
+
+      <p class="mt-2 text-sm text-zinc-500">
+        Monitor users, activities and security events across the platform.
+      </p>
+    </header>
+
+    <div class="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+      <DashboardStatCard
+        v-for="statistic in statistics"
+        :key="statistic.label"
+        :label="statistic.label"
+        :value="statistic.value"
+        :description="statistic.description"
+        :trend="statistic.trend"
+        :trend-direction="statistic.trendDirection"
+        :icon="statistic.icon"
+      />
+    </div>
   </section>
 </template>
