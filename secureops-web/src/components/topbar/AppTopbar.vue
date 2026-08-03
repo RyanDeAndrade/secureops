@@ -3,14 +3,9 @@ import { Bell, ChevronDown, Search } from 'lucide-vue-next'
 </script>
 
 <template>
-  <header
-    class="flex h-20 items-center justify-between border-b border-zinc-200 bg-white px-6"
-  >
+  <header class="flex h-20 items-center justify-between border-b border-zinc-200 bg-white px-6">
     <div class="relative hidden w-full max-w-sm md:block">
-      <Search
-        class="absolute left-3 top-1/2 -translate-y-1/2 text-zinc-400"
-        :size="18"
-      />
+      <Search class="absolute left-3 top-1/2 -translate-y-1/2 text-zinc-400" :size="18" />
 
       <input
         type="search"
@@ -27,9 +22,7 @@ import { Bell, ChevronDown, Search } from 'lucide-vue-next'
       >
         <Bell :size="20" />
 
-        <span
-          class="absolute right-2 top-2 h-2 w-2 rounded-full bg-red-500"
-        />
+        <span class="absolute right-2 top-2 h-2 w-2 rounded-full bg-red-500" />
       </button>
 
       <button
@@ -43,13 +36,9 @@ import { Bell, ChevronDown, Search } from 'lucide-vue-next'
         </div>
 
         <div class="hidden text-left sm:block">
-          <p class="text-sm font-semibold text-zinc-900">
-            Ryan Andrade
-          </p>
+          <p class="text-sm font-semibold text-zinc-900">Ryan Andrade</p>
 
-          <p class="text-xs text-zinc-500">
-            Administrator
-          </p>
+          <p class="text-xs text-zinc-500">Administrator</p>
         </div>
 
         <ChevronDown class="text-zinc-400" :size="17" />
