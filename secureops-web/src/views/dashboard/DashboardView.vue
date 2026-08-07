@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import { Activity, ShieldAlert, UserCheck, Users } from 'lucide-vue-next'
 
+import AppCard from '@/components/common/AppCard.vue'
 import DashboardStatCard from './components/DashboardStatCard.vue'
+import RecentActivityList from './components/RecentActivityList.vue'
 const statistics = [
   {
     label: 'Total users',
@@ -61,6 +63,17 @@ const statistics = [
         :trend-direction="statistic.trendDirection"
         :icon="statistic.icon"
       />
+    </div>
+    <div class="mt-6">
+      <AppCard padding="large">
+        <div class="mb-5">
+          <h2 class="text-lg font-bold text-zinc-900">Recent activity</h2>
+
+          <p class="mt-1 text-sm text-zinc-500">Latest actions recorded across the platform.</p>
+        </div>
+
+        <RecentActivityList />
+      </AppCard>
     </div>
   </section>
 </template>
