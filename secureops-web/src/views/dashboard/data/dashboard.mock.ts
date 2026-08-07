@@ -35,3 +35,24 @@ export const recentActivities = [
     icon: FileText,
   },
 ]
+
+export const securityAlerts = [
+  {
+    id: 1,
+    title: 'Multiple failed login attempts',
+    source: 'IP 192.168.1.24',
+    severity: 'high',
+  },
+  {
+    id: 2,
+    title: 'User permission changed',
+    source: 'Administrator account',
+    severity: 'medium',
+  },
+  {
+    id: 3,
+    title: 'Unusual access location',
+    source: 'Dublin, Ireland',
+    severity: 'low',
+  },
+]
