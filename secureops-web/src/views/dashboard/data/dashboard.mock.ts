@@ -1,3 +1,4 @@
+
 import {
   FileText,
   LogIn,
@@ -5,7 +6,10 @@ import {
   UserPlus,
 } from 'lucide-vue-next'
 
-export const recentActivities = [
+import type { SecurityAlert } from '../types/SecurityAlert'
+import type { RecentActivity } from '../types/RecentActivity'
+
+export const recentActivities: RecentActivity[] = [
   {
     id: 1,
     title: 'New user created',
@@ -36,8 +40,7 @@ export const recentActivities = [
   },
 ]
 
-export const securityAlerts = [
-  {
+export const securityAlerts: SecurityAlert[] = [  {
     id: 1,
     title: 'Multiple failed login attempts',
     source: 'IP 192.168.1.24',

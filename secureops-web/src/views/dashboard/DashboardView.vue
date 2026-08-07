@@ -11,8 +11,8 @@ import AppCard from '@/components/common/AppCard.vue'
 import DashboardStatCard from './components/DashboardStatCard.vue'
 import RecentActivityList from './components/RecentActivityList.vue'
 import SecurityAlertsList from './components/SecurityAlertsList.vue'
-
-const statistics = [
+import type { DashboardStatistic } from './types/DashboardStatistic'
+const statistics: DashboardStatistic[] = [
   {
     label: 'Total users',
     value: 248,
